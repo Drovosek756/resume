@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Резюме — Ветошкин Виктор Александрович</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #3498db;
+            --bg-color: #f4f7f6;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --text-secondary: #666666;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        main {
+            max-width: 800px;
+            margin: -2rem auto 2rem;
+            padding: 0 1rem;
+        }
+
+        section {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+
+        section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+        }
+
+        ul li::before {
+            content: "•";
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+            position: absolute;
+            left: 0;
+            top: -2px;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: #2980b9;
+            text-decoration: underline;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tech-badge {
+            background-color: #e8f4f8;
+            color: #2980b9;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            main {
+                margin-top: 1rem;
+            }
+            section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Ветошкин Виктор Александрович</h1>
+    </header>
+
+    <main>
+        <!-- Раздел: О себе -->
+        <section id="about">
+            <h2>О себе</h2>
+            <p>
+                Ветошкин Вкитор-студент <strong>Сыктывкарского государственного университета имени Питирима Сорокина</strong> . 
+                Прохожу обучение на Информационные системы и программирование (Программист) 
+            </p>
+	    <p>
+                <strong>Технический стек:</strong> Имею учебный опыт работы с языками программирования:
+            </p>
+            <div class="tech-stack">
+                 <span class="tech-badge">Java</span>
+                <span class="tech-badge">C++</span>
+                <span class="tech-badge">C#</span>
+                <span class="tech-badge">Python</span>
+                <span class="tech-badge">GDscripts (Godot Engine)</span>
+            </div>
+	    <p>
+                А также базовые знания веб-разработки:
+            </p>
+            <div class="tech-stack">
+                <span class="tech-badge">HTML</span>
+                <span class="tech-badge">CSS</span>
+                <span class="tech-badge">PHP</span>
+            </div>
+            <br>
+            <p>
+                Цель-завершить обучение и не помереть где нибудь по пути к этой реализации
+            </p>
+        </section>
+
+        <!-- Раздел: О моих проектах -->
+        <section id="projects">
+            <h2>О моих проектах</h2>
+            
+            <h3>Nosebrain Judge</h3>
+            <p>
+                Мобильное приложение для Android, предназначенное для судейства соревнований по ноузворку (nosework) в автономном режиме. Приложение включает в себя всё необходимое для организации и проведения соревнований без зависимости от интернета.
+            </p>
+            <br>
+            <ul>
+                <li>Создание соревнований, участников и категорий.</li>
+                <li>Автономное проведение соревнования и сохранение результатов.</li>
+                <li>Синхронизация данных с локальным веб-сервером при необходимости.</li>
+            </ul>
+
+            <div class="tech-stack">
+                <span class="tech-badge">Java</span>
+                <span class="tech-badge">Android SDK (API 24+)</span>
+                <span class="tech-badge">Room (SQLite)</span>
+                <span class="tech-badge">Material Design</span>
+                <span class="tech-badge">RecyclerView</span>
+            </div>
+
+            <br>
+            <p>
+                🔗 <strong>Ссылка на проект:</strong> <a href="https://github.com/Drovosek756/Nosebrainapp" target="_blank">GitHub — Nosebrainapp</a>
+            </p>
+        </section>
+
+        <!-- Раздел: О будущем проекте -->
+        <section id="future-project">
+            <h2>О будущем проекте</h2>
+            
+            <h3>Трекер привычек</h3>
+            <p>
+                Мобильное приложение для платформы Android, помогающее пользователям вырабатывать полезные привычки (спорт, чтение, режим сна и т.д.) и поддерживать мотивацию через наглядный прогресс. Проект решает проблему нерегулярного и неудобного отслеживания привычек в обычных заметках или календарях.
+            </p>
+            <br>
+            <h3>Ключевой функционал:</h3>
+            <ul>
+                <li>Создание и удаление привычек с указанием названия.</li>
+                <li>Ежедневная отметка выполнения и возможность снятия отметки.</li>
+                <li>Автоматический подсчёт текущих серий выполнения (streak).</li>
+                <li>Просмотр недельной и месячной статистики выполнения.</li>
+                <li>Система виртуальных достижений за выполнение определённых условий (например, «7 дней подряд»).</li>
+            </ul>
+
+            <br>
+            <h3>Технические особенности и ограничения:</h3>
+            <ul>
+                <li>Разработка ведётся для платформы Android (версии 7.0 и выше).</li>
+                <li>Полная автономность: приложение работает без подключения к интернету.</li>
+                <li>Локальное хранение данных на устройстве пользователя.</li>
+                <li>Однопользовательский режим без необходимости регистрации и авторизации.</li>
+                <li>Интерфейс приложения выполнен на русском языке.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Ветошкин Виктор Александрович. Все права защищены.</p>
+    </footer>
+
+</body>
+</html>
